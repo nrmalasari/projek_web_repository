@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>penulis</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css"> <!-- Merujuk ke file CSS terpisah -->
+
+    <style>
+        /* CSS Anda disini */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.875rem;
+            opacity: 1;
+            overflow-y: scroll;
+            margin: 0;
+        }
+
+        a {
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .form-container {
+            border: 2px solid #ffffff; /* Warna biru untuk border */
+            border-radius: 10px; /* Membuat sudut border melengkung */
+            padding: 20px; /* Ruang dalam border */
+            margin-top: 30px; /* Jarak antara form dan elemen sebelumnya */
+            background-color: #ffffff; /* Warna latar belakang */
+        }
+
+        .form-container h4 {
+            margin-bottom: 20px; /* Jarak bawah dari judul form */
+            color: #1f1f1f; /* Warna teks judul */
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px; /* Jarak antara input */
+            box-sizing: border-box;
+            border: 5px solid rgb(204, 204, 204); /* Merubah warna border menjadi abu-abu */
+            border-radius: 15px; /* Membuat sudut input melengkung */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek shadow */
+        }
+
+        .form-control:focus {
+            border-color: #838383; /* Warna border saat input aktif */
+            outline: none; /* Hilangkan outline */
+        }
+
+        .form-check-input {
+            margin-right: 10px; /* Jarak antara input radio */
+        }
+
+        .btn-primary {
+            border-color: #838383; /* Warna border saat input aktif */
+            background-color:#ffa270; /* Warna latar belakang tombol */
+            border: none; /* Hilangkan border tombol */
+            border-radius: 10px; /* Membuat sudut tombol melengkung */
+            transition: background-color 0.4s; /* Efek transisi ketika tombol dihover */
+        }
+
+        .btn-primary:hover {
+            background-color: #6b6b6b; /* Warna latar belakang tombol saat dihover */
+        }
+
+        .modal-content {
+            border-radius: 15px; /* Membuat sudut modal melengkung */
+        }
+
+        .modal-footer {
+            border-top: none; /* Hilangkan border di bagian footer modal */
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="fcontainer">
+        <nav class="warping">
+            <div class="brand">
+                <img src="logo.jpeg" alt="my-logo">
+                <div class="logoname">Repository ITH</div>
+            </div>
+
+            <div class="search">
+              <div class="search-bar">
+                <div class="dropdown">
+                  <div id="drop-text" class="dropdown-text">
+                    <span id="span">All</span>
+                    <i id="icon" class="fa-solid fa-chevron-down"></i>
+                  </div>
+                  <ul id="list" class="dropdown-list">
+                    <li class="dropdown-list-item">Judul</li>
+                    <li class="dropdown-list-item">Penulis</li>
+                    <li class="dropdown-list-item">Nim Penulis</li>
+                    <li class="dropdown-list-item">Pembimbing</li>
+                    <li class="dropdown-list-item">Penguji</li>
+                  </ul>
+                </div>
+        
+                <div class="serach-box">
+                  <input type="text" id="search-input" placeholder="Search Anything...">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+
+            <ul class="navigation">
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><img src="user.png" alt="..."></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="form-container">
+                <h4>Add entry manually</h4>
+                <form>
+                    <div class="mb-3">
+                        <label for="inputReference" class="form-label">Reference Type</label>
+                        <input type="email" class="form-control" id="inputReference" placeholder="Journal Article">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputTitle" class="form-label">Title</label>
+                        <input type="password" class="form-control" id="inputTitle">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputType" class="form-label">Type</label>
+                        <select type="select" class="form-control" id="inputType" placeholder="type">
+                            <option value="Article">Artikel</option>
+                            <option value="Jurnal">Jurnal</option>
+                            <option value="Skripsi">Skripsi</option>
+                            <option value="Tesis">Tesis</option>
+                        </select>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputAuthors" class="form-label">Authors</label>
+                        <input type="text" class="form-control" id="inputAuthors" placeholder="Please enter author name as 'last name, first name' (e.g. 'Mark, Lee')">
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-outline-secondary" type="button" id="addAuthorButton">
+                            <i class="fas fa-plus"></i> Add another author
+                        </button>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="inputYear" class="form-label">Year</label>
+                                <input type="text" class="form-control" id="inputYear">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="inputPages" class="form-label">Pages</label>
+                                <input type="text" class="form-control" id="inputPages">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="inputVolume" class="form-label">Volume</label>
+                                <input type="text" class="form-control" id="inputVolume">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="inputIssue" class="form-label">Issue</label>
+                                <input type="text" class="form-control" id="inputVolume">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputMonth" class="form-label">Month</label>
+                        <input type="text" class="form-control" id="inputMonth">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputDay" class="form-label">Day</label>
+                        <input type="text" class="form-control" id="inputDay">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputAbstract" class="form-label">Abstract</label>
+                        <input type="text" class="form-control" id="inputAbstract">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputStatement" class="form-label">Statement Letter</label>
+                        <input type="file" class="form-control" id="inputStatement">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="inputNewfile">Add new file</label>
+                        <select id="inputNewfile" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>File(s) from computer</option>
+                            <option>Add entry manually</option>
+                        </select>
+                        </div>
+                    <button type="submit" class="btn btn-primary">Add entry</button>
+                    <button type="submit" class="btn btn-primary">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

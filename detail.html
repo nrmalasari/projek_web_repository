@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="fcontainer">
+        <nav class="warping">
+            <div class="brand">
+                <img src="logo.jpeg" alt="my-logo">
+                <div class="logoname">Repository ITH</div>
+            </div>
+
+            <div class="search">
+              <div class="search-bar">
+                <div class="dropdown">
+                  <div id="drop-text" class="dropdown-text">
+                    <span id="span">All</span>
+                    <i id="icon" class="fa-solid fa-chevron-down"></i>
+                  </div>
+                  <ul id="list" class="dropdown-list">
+                    <li class="dropdown-list-item">Judul</li>
+                    <li class="dropdown-list-item">Penulis</li>
+                    <li class="dropdown-list-item">Nim Penulis</li>
+                    <li class="dropdown-list-item">Pembimbing</li>
+                    <li class="dropdown-list-item">Penguji</li>
+                  </ul>
+                </div>
+        
+                <div class="serach-box">
+                  <input type="text" id="search-input" placeholder="Search Anything...">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+
+            <ul class="navigation">
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><img src="user.png" alt="..."></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container d-flex ">
+      <div class="detail">
+        <h1 class="content-title">Pengembangan Media <i>Proxy</i> untuk Mendukung Komunikasi <i>Real Time</i> Berbasis Web (<i>WebRTC</i>)<br></h1>
+          <h3 class="content-subtitle mt-3 mb-0">Author(s) : Renee Garett, MS, LCSW</h3>
+          <div class="divider"></div>
+          <div class="content-article">
+            <strong >Abstrak</strong>
+            <p class="mb-2"></p>
+            <p>Aplikasi komunikasi real time berbasis web (webRTC) cukup populer saat ini karena memberikan kemudahan bagi para pengguna dalam melakukan pertukaran data berupa gambar, suara maupun video antar client secara peer-to-peer tanpa adanya plugin tambahan seperti flash player pada browser. Akan tetapi aplikasi webRTC sendiri memiliki keterbatasan pada jumlah client yang dapat terhubung dalam satu waktu terkhusus pada aplikasi berupa video conference. Hal ini dikarenakan setiap client yang terhubung akan mengkonsumsi bandwidth, RAM, serta processor yang cukup tinggi seiring dengan peningkatan jumlah client (peer). Tujuan dari penelitian ini adalah untuk menghasilkan sebuah infrastruktur yang memanfaatkan media server untuk mengatasi kendala - kendala pada aplikasi webRTC serta dapat diterapkan di lingkungan Universitas Hasanuddin. Dalam penelitian ini dikembangkan sebuah algoritma yang dapat digunakan untuk membagi beban kerja dari aplikasi webRTC kedalam beberapa media server sehingga aplikasi webRTC dapat digunakan untuk skala yang lebih besar. Selain itu algoritma tersebut digunakan untuk mengoptimalkan penggunaan beberapa media server di lingkungan Universitas Hasanuddin. Hasil dari penelitian ini adalah dikembangkannya sebuah aplikasi webRTC berupa video conference yang menerapkan algoritma tersebut serta pembuatan model infrastruktur berbasis media server.</p>
+            <p class="mb-2"></p>
+            <strong class="fw-normal">Keyword(s):</strong>
+            <p><i>Kurento, Video Conference, webRTC</i></p>
+            <p><a href="#" class="btn-download">Download PDF</a></p>
+        </div>
+  </div>
+  <script src="scripts.js"></script>
+
+</body>
+</html>
